@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         resultTextView = findViewById(R.id.resultTextView)
         val calculateButton: Button = findViewById(R.id.calculateButton)
 
-        val operations = arrayOf("+", "-", "*", "/")
+        val operations = arrayOf("+", "-", "*", "/", "%")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, operations)
         operationSpinner.adapter = adapter
 
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 "-" -> num1 - num2
                 "*" -> num1 * num2
                 "/" -> if (num2 != 0f) num1 / num2 else "Cannot divide by zero"
+                "%" -> if (num2 != 0f )num1 % num2 else num1
                 else -> 0
             }
             resultTextView.text = "Result: $result"

@@ -9,6 +9,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    // Generative AI citation
+    // https://chat.openai.com/share/1c56804c-9a1a-43c6-937d-f28a535e6b30
+    //
 
     private lateinit var number1EditText: EditText
     private lateinit var number2EditText: EditText
